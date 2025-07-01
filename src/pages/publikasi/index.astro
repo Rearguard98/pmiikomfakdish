@@ -9,94 +9,46 @@ const posts = (await getCollection("artikel")).sort(
 ---
 
 <Layout>
-  <main class="w-5xl">
+  <main class="w-5xl justify-center mx-auto">
     <section>
-      <ul class="flex flex-wrap w-96 justify-center">
-        {
+      <!-- Card Grid -->
+<ul class="py-12 grid grid-cols-1 sm:grid-cols-2 gap-8 lg:gap-12">
+  <!-- Card -->
+   {
           posts.map((post) => (
             <li>
-              <a href={`/publikasi/${post.id}/`}>
-                <img
+              <a class="group flex flex-col focus:outline-hidden" href={`/publikasi/${post.id}/`}>
+                <div class="aspect-w-16 aspect-h-12 overflow-hidden bg-gray-100 rounded-2xl dark:bg-neutral-800">
+                  <img class="group-hover:scale-105 group-focus:scale-105 transition-transform duration-500 ease-in-out object-cover rounded-2xl"
                   width={720}
-                  height={360}
+                  height={720}
                   src={post.data.heroImage}
-                  alt=""
+                  alt={post.data.altImage || "Gambar publikasi PMII"}
                 />
-                <h4 class="title">{post.data.title}</h4>
-                <p class="m-0 text-gray-500">
-                  <FormattedDate date={post.data.pubDate} />
+                </div>
+                <div class="pt-4">
+                <h2 class="relative inline-block font-medium text-lg text-black before:absolute before:bottom-0.5 before:start-0 before:-z-1 before:w-full before:h-1 before:bg-lime-400 before:transition before:origin-left before:scale-x-0 group-hover:before:scale-x-100 dark:text-white">{post.data.title}</h2>
+                <p class="m-0 mt-1 text-gray-600 dark:text-neutral-400">
+                  {post.data.description || "Artikel publikasi PMII."}
+                  
                 </p>
               </a>
+              <div class="mt-3 flex flex-wrap gap-2">
+        <span class="py-1.5 px-3 bg-white text-gray-600 border border-gray-200 text-xs sm:text-sm rounded-xl dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400">
+          {post.data.category || "Publikasi"}
+        </span>
+        <span class="py-1.5 px-3 bg-white text-gray-600 border border-gray-200 text-xs sm:text-sm rounded-xl dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400">
+          {post.data.tag || "Publikasi"}
+        </span>
+        <span class="py-1.5 px-3 bg-white text-gray-600 border border-gray-200 text-xs sm:text-sm rounded-xl dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400">
+          <FormattedDate date={post.data.pubDate} />
+        </span>
+      </div></div>
             </li>
           ))
         }
-      </ul>
+  </ul>
+  <!-- End Card -->
     </section>
   </main>
 </Layout>
-<style>
-  ul {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-  }
-  ul li {
-    width: calc(50% - 1rem);
-  }
-  ul li * {
-    text-decoration: none;
-    transition: 0.2s ease;
-  }
-  ul li:first-child {
-    width: 100%;
-    margin-bottom: 1rem;
-    text-align: center;
-  }
-  ul li:first-child img {
-    width: 100%;
-  }
-  ul li:first-child .title {
-    font-size: 2.369rem;
-  }
-  ul li img {
-    margin-bottom: 0.5rem;
-    border-radius: 12px;
-  }
-  ul li a {
-    display: block;
-  }
-  .title {
-    margin: 0;
-    color: rgb(var(--black));
-    line-height: 1;
-  }
-  .date {
-    margin: 0;
-    color: rgb(var(--gray));
-  }
-  ul li a:hover h4,
-  ul li a:hover .date {
-    color: rgb(var(--accent));
-  }
-  ul a:hover img {
-    box-shadow: var(--box-shadow);
-  }
-  @media (max-width: 720px) {
-    ul {
-      gap: 0.5em;
-    }
-    ul li {
-      width: 100%;
-      text-align: center;
-    }
-    ul li:first-child {
-      margin-bottom: 0;
-    }
-    ul li:first-child .title {
-      font-size: 1.563em;
-    }
-  }
-</style>

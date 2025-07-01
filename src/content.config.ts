@@ -8,10 +8,13 @@ const artikel = defineCollection({
 	schema: z.object({
 		title: z.string(),
 		description: z.string(),
+		category: z.string().optional(),
+		tag: z.string().optional(),
 		// Transform string to Date object
 		pubDate: z.coerce.date(),
 		updatedDate: z.coerce.date().optional(),
 		heroImage: z.string().optional(),
+		altImage: z.string().optional(),
 	}),
 });
 

@@ -1,0 +1,24 @@
+backend:
+  name: git-gateway
+  branch: main
+  media_folder: "src/assets/images"
+  public_folder: "src/assets/images"
+
+  collections:
+    name: "Artikel" # The name of the collection, used in the UI
+    label: "Publikasi" # Used in the UI
+    folder: "src/content/artikel" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{day}}-{{month}}-{{year}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - { label: "Layout", name: "layout", widget: "hidden", default: "artikel" }
+      - { label: "Judul", name: "title", widget: "string" }
+      - { label: "Tanggal publikasi", name: "date", widget: "datetime" }
+      - { label: "Gambar Unggulan", name: "thumbnail", widget: "heroimage" }
+      - { label: "Rating (skala 1-5)", name: "rating", widget: "number" }
+      - { label: "Isi", name: "body", widget: "markdown" }
+    filter:
+      field: language
+      value: id
+    fields:
+      - { label: "Bahasa", name: "language" }
