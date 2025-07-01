@@ -23,7 +23,7 @@ collections:
     fields: 
       - { label: "Judul", name: "title", widget: "string" }
       - { label: "Tanggal Publikasi", name: "date", widget: "datetime" }
-      - { label: "Gambar Unggulan", name: "image", widget: "string" }
+      - { label: "Gambar Unggulan", name: "image", widget: "thumbnail" }
       - { label: "Isi", name: "body", widget: "markdown" }
       - { label: "Kategori", name: "category", widget: "select", options: ["Kegiatan", "Publikasi", "Pendidikan", "Sejarah"] }
       - { label: "Tag", name: "tags", widget: "list", default: [], allow_add: true, allow_delete: true, collapsed: false, field: { label: "Tagar", name: "tag", widget: "string" } }
