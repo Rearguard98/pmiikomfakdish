@@ -1,24 +1,22 @@
 backend:
   name: git-gateway
   branch: main
-  media_folder: "src/assets/images"
-  public_folder: "src/assets/images"
+  
+media_folder: 'src/assets/images'
+public_folder: '/_astro'
+  
 
-  collections:
-  - name: "blog" # The name of the collection, used in the UI
-    label: "Publikasi" # Used in the UI
-    folder: "src/content/artikel" # The path to the folder where the documents are stored
-    create: true # Allow users to create new documents in this collection
-    slug: "{{day}}-{{month}}-{{year}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
-    fields: # The fields for each document, usually in front matter
-      - { label: "Layout", name: "layout", widget: "hidden", default: "artikel" }
+collections:
+  - name: 'artikel'
+    label: 'Artikel'
+    folder: 'src/content/artikel'
+    create: true
+    fields: 
       - { label: "Judul", name: "title", widget: "string" }
-      - { label: "Tanggal publikasi", name: "date", widget: "datetime" }
-      - { label: "Gambar Unggulan", name: "thumbnail", widget: "heroimage" }
-      - { label: "Rating (skala 1-5)", name: "rating", widget: "number" }
+      - { label: "Tanggal Publikasi", name: "date", widget: "datetime" }
+      - { label: "Gambar Unggulan", name: "image", widget: "string" }
       - { label: "Isi", name: "body", widget: "markdown" }
-    filter:
-      field: language
-      value: id
-    fields:
-      - { label: "Bahasa", name: "language" }
+      - { label: "Kategori", name: "category", widget: "select", options: ["Kegiatan", "Publikasi", "Pendidikan", "Sejarah"] }
+      - { label: "Tag", name: "tags", widget: "list", default: [], allow_add: true, allow_delete: true, collapsed: false, field: { label: "Tagar", name: "tag", widget: "string" } }
+      - { label: "Penulis", name: "author", widget: "string" }
+      - { label: "Status", name: "status", widget: "select", options: ["Draft", "Published", "Archived"], default: "Draft" }

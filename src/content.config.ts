@@ -15,6 +15,8 @@ const artikel = defineCollection({
 		updatedDate: z.coerce.date().optional(),
 		heroImage: z.string().optional(),
 		altImage: z.string().optional(),
+		status: z.enum(['draft', 'published', 'archived']).default('draft'),
+		author: z.string().optional(),
 	}),
 });
 
