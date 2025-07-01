@@ -1,10 +1,19 @@
 backend:
   name: git-gateway
   branch: main
-  
+  commit_messages:
+    create: Create {{collection}} “{{slug}}”
+    update: Update {{collection}} “{{slug}}”
+    delete: Delete {{collection}} “{{slug}}”
+    uploadMedia: Upload “{{path}}”
+    deleteMedia: Delete “{{path}}”
+    openAuthoring: '{{message}}'
+
 media_folder: 'src/assets/images'
 public_folder: '/_astro'
-  
+locale: 'id'
+
+publish_mode: editorial_workflow
 
 collections:
   - name: 'artikel'
