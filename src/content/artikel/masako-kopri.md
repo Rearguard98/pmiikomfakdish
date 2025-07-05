@@ -1,7 +1,7 @@
 ---
 title: Masako KOPRI
 publishDate: 2025-07-05T19:18:00.000Z
-heroImage: /src/assets/images/blog-placeholder-1.jpg
+heroImage: src/assets/images/kopri-masako.webp
 altImage: Gambar Masako KOPRI
 description: |-
   
