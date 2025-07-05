@@ -1,7 +1,7 @@
 ---
 title: artikel gambar lokal
 publishDate: 2025-07-06T00:46:00.000Z
-heroImage: _astro/lokal.jpg
+heroImage: /src/assets/images/marek-piwnicki-x-7-ae8deka-unsplash.jpg
 altImage: gambar lokal
 description: testing gambar lokal di decap cms lewat netlify
 category: KOPRI
