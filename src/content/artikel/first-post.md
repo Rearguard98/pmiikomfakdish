@@ -1,10 +1,9 @@
 ---
-title: Third post
+title: First post
 description: Lorem ipsum dolor sit amet
-publishDate: 08.07.2025T16:45
-updateDate: 05.07.2025T16:45
-heroImage: /_astro/blog-placeholder-2.jpg
-altImage: gambar markdown-3
+publishDate: 07 February 2025
+heroImage: /src/assets/images/blog-placeholder-3.jpg
+altImage: gambar markdown1
 category: KOPRI
 tags:
   - kopri

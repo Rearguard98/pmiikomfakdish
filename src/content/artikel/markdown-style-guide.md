@@ -1,9 +1,8 @@
 ---
 title: Markdown Style Guide
 description: Here is a sample of some basic Markdown syntax that can be used when writing Markdown content in Astro.
-publishDate: 08.07.2025T16:45
-updateDate: 05.07.2025T16:45
-heroImage: /_astro/blog-placeholder-1.jpg
+publishDate: 2025-07-08
+heroImage: /src/assets/images/blog-placeholder-1.jpg
 altImage: gambar markdown
 category: KOPRI
 tags:
