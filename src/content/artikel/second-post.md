@@ -1,7 +1,7 @@
 ---
 title: 'Second post'
 description: 'Lorem ipsum dolor sit amet'
-publishedDate: 'Jul 15 2022'
+publishDate: 'Jul 15 2022'
 heroImage: '/_astro/blog-placeholder-4.jpg'
 altImage: 'gambar markdown2'
 ---
