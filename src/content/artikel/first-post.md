@@ -1,9 +1,9 @@
 ---
 title: First post
-description: Lorem ipsum dolor sit amet
-publishDate: 07 February 2025
+publishDate: 2025-07-05T18:47:00.000Z
 heroImage: /src/assets/images/blog-placeholder-3.jpg
 altImage: gambar markdown1
+description: Lorem ipsum dolor sit amet
 category: KOPRI
 tags:
   - kopri
