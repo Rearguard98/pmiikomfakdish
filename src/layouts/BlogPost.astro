@@ -7,7 +7,7 @@ import FormattedDate from '../components/FormattedDate.astro';
 
 type Props = CollectionEntry<'artikel'>['data'];
 
-const { title, description, pubDate, updatedDate, heroImage, altImage } = Astro.props;
+const { title, description, publishDate, heroImage, altImage } = Astro.props;
 ---
 
 <html lang="id">
@@ -45,11 +45,11 @@ const { title, description, pubDate, updatedDate, heroImage, altImage } = Astro.
 					<div class="title">
 						<h1 class="text-4xl mb-4">{title}</h1>
 						<div class="mb-4">
-							<FormattedDate date={pubDate} />
+							<FormattedDate date={publishDate} />
 							{
-								updatedDate && (
+								publishDate && (
 									<div class="text-italic">
-										Terakhir diperbarui <FormattedDate date={updatedDate} />
+										Tanggal Publikasi <FormattedDate date={publishDate} />
 									</div>
 								)
 							}
