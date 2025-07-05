@@ -9,6 +9,8 @@ backend:
     deleteMedia: Delete “{{path}}”
     openAuthoring: '{{message}}'
 
+editor:
+     preview: true
 media_folder: 'src/assets/images'
 public_folder: '/_astro'
 locale: 'id'
@@ -22,8 +24,8 @@ collections:
     create: true
     fields: 
       - { label: "Judul", name: "title", widget: "string" }
-      - { label: "Tanggal Publikasi", name: "pubDate", widget: "date" }
-      - { label: "Tanggal Update", name: "updateDate", widget: "date" }
+      - { label: "Tanggal Publikasi", name: "pubDate", widget: "datetime" ,date_format: "DD.MM.YYYY", time_format: "HH:mm", default: "{{now}}" }
+      - { label: "Tanggal Update", name: "updateDate", widget: "datetime", date_format: "DD.MM.YYYY", time_format: "HH:mm", default: "{{now}}" }
       - { label: "Gambar Unggulan", name: "heroImage", widget: "image" }
       - { label: "Alt Gambar", name: "altImage", widget: "string", hint: "Deskripsi singkat gambar untuk aksesibilitas" }
       - { label: "Isi", name: "body", widget: "markdown" }
@@ -32,3 +34,5 @@ collections:
       - { label: "Tag", name: "tags", widget: "list", default: [], allow_add: true, allow_delete: true, collapsed: false, field: { label: "Tagar", name: "tag", widget: "string" } }
       - { label: "Penulis", name: "author", widget: "string" }
       - { label: "Status", name: "status", widget: "select", options: ["draft", "published", "archived"]}
+display_url: site_url
+
