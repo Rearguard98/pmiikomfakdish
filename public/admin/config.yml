@@ -12,7 +12,6 @@ site_url: 'https://pmiikomfakdish.or.id'
 
 
 media_folder: 'src/assets/images'
-public_folder: '_astro'
 locale: 'id'
 
 publish_mode: editorial_workflow
