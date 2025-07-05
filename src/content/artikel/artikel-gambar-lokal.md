@@ -1,7 +1,7 @@
 ---
 title: artikel gambar lokal
 publishDate: 2025-07-06T00:46:00.000Z
-heroImage: /assets/images/jonas-degener-bbrrjzydgom-unsplash.jpg
+heroImage: _astro/lokal.jpg
 altImage: gambar lokal
 description: testing gambar lokal di decap cms lewat netlify
 category: KOPRI
