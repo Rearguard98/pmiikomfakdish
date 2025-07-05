@@ -1,6 +1,6 @@
 ---
 title: First post
-publishDate: 2025-07-05T18:47:00.000Z
+publishDate: 2025-07-05T18:50:00.000Z
 heroImage: /src/assets/images/blog-placeholder-3.jpg
 altImage: gambar markdown1
 description: Lorem ipsum dolor sit amet
