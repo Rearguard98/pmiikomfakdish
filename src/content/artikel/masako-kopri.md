@@ -1,7 +1,7 @@
 ---
 title: Masako KOPRI
 publishDate: 2025-07-05T19:18:00.000Z
-heroImage: src/assets/images/kopri-masako.webp
+heroImage: _astro/clem-onojeghuo-r8ldttswguc-unsplash.jpg
 altImage: Gambar Masako KOPRI
 description: |-
   
