@@ -25,8 +25,8 @@ collections:
     create: true
     fields: 
       - { label: "Judul", name: "title", widget: "string" }
-      - { label: "Tanggal Publikasi", name: "pubDate", widget: "datetime" ,date_format: "DD.MM.YYYY", time_format: "HH:mm", default: "{{now}}" }
-      - { label: "Tanggal Update", name: "updateDate", widget: "datetime", date_format: "DD.MM.YYYY", time_format: "HH:mm", default: "{{now}}" }
+      - { label: "Tanggal Publikasi", name: "publishDate", widget: "datetime" ,date_format: "DD.MM.YYYY", time_format: "HH:mm", hint: "Tanggal dan waktu publikasi artikel."}
+      - { label: "Tanggal Update", name: "updateDate", widget: "datetime", date_format: "DD.MM.YYYY", time_format: "HH:mm", hint: "Tanggal dan waktu update artikel."}
       - { label: "Gambar Unggulan", name: "heroImage", widget: "image" }
       - { label: "Alt Gambar", name: "altImage", widget: "string", hint: "Deskripsi singkat gambar untuk aksesibilitas" }
       - { label: "Isi", name: "body", widget: "markdown" }

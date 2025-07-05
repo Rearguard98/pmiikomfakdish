@@ -1,8 +1,8 @@
 ---
 title: 'Third post'
 description: 'Lorem ipsum dolor sit amet'
-pubDate: 'Jul 22 2022'
-heroImage: '/blog-placeholder-2.jpg'
+publishedDate: 'Jul 22 2022'
+heroImage: '/_astro/blog-placeholder-2.jpg'
 altImage: 'gambar markdown-3'
 ---
 

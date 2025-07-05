@@ -1,6 +1,6 @@
 ---
 title: Testing-Masako
-pubDate: 05.07.2025T16:45
+publishedDate: 05.07.2025T16:45
 updateDate: 05.07.2025T16:45
 heroImage: /_astro/kopri-masako.webp
 altImage: gambar kopri masako
