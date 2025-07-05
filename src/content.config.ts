@@ -10,9 +10,8 @@ const artikel = defineCollection({
 		description: z.string(),
 		category: z.string().optional(),
 		tag: z.string().optional(),
-		// Transform string to Date object
-		pubDate: z.coerce.date(),
-		updatedDate: z.coerce.date().optional(),
+		publishDate: z.date(),
+		updatedDate: z.string().transform((str) => new Date(str)),
 		heroImage: z.string().optional(),
 		altImage: z.string().optional(),
 		status: z.enum(['draft', 'published', 'archived']).default('draft'),

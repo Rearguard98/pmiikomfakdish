@@ -4,7 +4,7 @@ import { getCollection } from "astro:content";
 import FormattedDate from "../../components/FormattedDate.astro";
 
 const posts = (await getCollection("artikel")).sort(
-  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+  (a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf()
 );
 ---
 
@@ -42,7 +42,7 @@ const posts = (await getCollection("artikel")).sort(
           {post.data.tag || "Publikasi"}
         </span>
         <span class="py-1.5 px-3 bg-white text-gray-600 border border-gray-200 text-xs sm:text-sm rounded-xl dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400">
-          <FormattedDate date={post.data.pubDate} />
+          <FormattedDate date={post.data.publishDate} />
         </span>
       </div></div>
             </li>
