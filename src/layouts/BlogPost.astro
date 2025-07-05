@@ -46,13 +46,6 @@ const { title, description, publishDate, heroImage, altImage } = Astro.props;
 						<h1 class="text-4xl mb-4">{title}</h1>
 						<div class="mb-4">
 							<FormattedDate date={publishDate} />
-							{
-								publishDate && (
-									<div class="text-italic">
-										Tanggal Publikasi <FormattedDate date={publishDate} />
-									</div>
-								)
-							}
 						</div>
 						
 						<hr />
