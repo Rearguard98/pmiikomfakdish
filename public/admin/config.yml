@@ -10,9 +10,7 @@ backend:
     openAuthoring: '{{message}}'
 
 media_folder: 'src/assets/images'
-public_folder: 'src/assets/images/uploads'
-
-locale: 'id'
+public_folder: '/_astro'
 
 publish_mode: editorial_workflow
 
