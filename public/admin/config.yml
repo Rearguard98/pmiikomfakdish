@@ -9,8 +9,9 @@ backend:
     deleteMedia: Delete “{{path}}”
     openAuthoring: '{{message}}'
 
-media_folder: src/assets/images
-public_folder: src/assets/images
+media_folder: 'src/assets/images'
+public_folder: 'src/assets/images/uploads'
+
 locale: 'id'
 
 publish_mode: editorial_workflow
