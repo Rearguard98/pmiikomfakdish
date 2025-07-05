@@ -11,7 +11,7 @@ const artikel = defineCollection({
 		category: z.string().optional(),
 		tag: z.string().optional(),
 		publishDate: z.coerce.date(),
-		heroImage: z.string(),
+		heroImage: z.string().optional(),
 		altImage: z.string().optional(),
 		status: z.enum(['draft', 'published', 'archived']).default('draft'),
 		author: z.string().optional(),
