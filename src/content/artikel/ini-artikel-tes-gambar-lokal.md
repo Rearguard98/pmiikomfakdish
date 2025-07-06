@@ -1,7 +1,7 @@
 ---
 title: Ini artikel tes gambar lokal
 publishDate: 2025-07-06T09:29:00.000Z
-heroImage: /_astro/jonas-degener-bbrrjzydgom-unsplash.jpg
+heroImage: /src/assets/images/jonas-degener-bbrrjzydgom-unsplash.jpg
 altImage: artikel gambar lokal
 description: |-
   
