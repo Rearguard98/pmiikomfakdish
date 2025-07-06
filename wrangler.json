@@ -1,5 +1,6 @@
 {
   "name": "pmiikomfakdish",
+  "$schema": "node_modules/wrangler/config-schema.json",
   "compatibility_date": "2025-04-01",
   "compatibility_flags": ["nodejs_compat"],
   "main": "./dist/_worker.js/index.js",
@@ -9,5 +10,11 @@
   "observability": {
     "enabled": true
   },
-  "upload_source_maps": true
+  "upload_source_maps": true,
+  "kv_namespaces": [
+    {
+      "binding": "KV",
+      "id": "037c09a1be784425b6ed971b738310a2"
+    }
+  ]
 }
