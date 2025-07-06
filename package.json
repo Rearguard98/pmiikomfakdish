@@ -16,7 +16,6 @@
     "@preline/theme-switch": "^3.0.0",
     "@tailwindcss/vite": "^4.0.14",
     "astro": "^5.10.1",
-    "decap-cms-app": "^3.7.1",
     "preline": "^3.0.1",
     "tailwindcss": "^4.0.14"
   },
