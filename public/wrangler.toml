@@ -1,0 +1,21 @@
+
+name: "pmiikomfakdish",
+main: "./dist/_worker.js/index.js",
+  // Update to today's date
+compatibility_date: "2025-07-06",
+compatibility_flags = ["newURLSearchParams", "newURLPattern", "newURL"],
+  // Enable the new URLSearchParams, URLPattern, and URL APIs
+  // See https://developers.cloudflare.com/workers/platform/compatibility-dates/
+[assets]
+    binding: "ASSETS",
+    directory: "./dist"
+
+[observability]
+    enabled: true
+
+[env.production]
+name: "pmiikomfakdish-production"
+
+[[env.production.routes]]
+pattern: "/(.*)",
+zone_name: "pmiikomfakdish.or.id"
