@@ -1,8 +1,8 @@
 {
-  "$schema": "node_modules/wrangler/config-schema.json",
   "name": "pmiikomfakdish",
   // Update to today's date
   "compatibility_date": "2025-07-06",
+  "main": "src/index.astro",
   "assets": {
     "directory": "./dist"
   }
