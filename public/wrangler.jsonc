@@ -1,5 +1,5 @@
 {
-  "name": "pmiikomfakdish",
+  "name": "pmiikomfakdish-worker",
   "main": "./dist/_worker.js/index.js",
   // Update to today's date
   "compatibility_date": "2025-07-06",
@@ -10,5 +10,20 @@
   },
   "observability": {
     "enabled": true
-  }
+  },
+  "env.production": {
+  "name": "pmiikomfakdish-production",
+    "bindings": {
+      "ASSETS": {
+        "type": "durable_object",
+        "class_name": "Assets"
+      }
+    }
+  },
+  "env.production.routes": [
+    {
+      "pattern": "/(.*)",
+      "zone_name": "pmiikomfakdish.or.id"
+    }
+  ]
 }

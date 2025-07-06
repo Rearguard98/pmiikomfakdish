@@ -5,7 +5,6 @@ import sitemap from '@astrojs/sitemap';
 import tailwindcss from '@tailwindcss/vite';
 
 import cloudflare from '@astrojs/cloudflare';
-import { getPlatformProxy } from 'wrangler';
 
 // https://astro.build/config
 export default defineConfig({
