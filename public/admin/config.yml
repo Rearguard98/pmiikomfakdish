@@ -9,7 +9,7 @@ backend:
     deleteMedia: Delete “{{path}}”
     openAuthoring: '{{message}}'
 
-media_folder: 'src/assets/images'
+media_folder: '/src/assets/images'
 public_folder: '/_astro'
 
 publish_mode: editorial_workflow
