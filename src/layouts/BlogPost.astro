@@ -34,9 +34,9 @@ const { title, description, publishDate, heroImage, altImage } = Astro.props;
 		
 	</head>
 
-	<body class="bg-white dark:bg-black text-black dark:text-white">
+	<body class="bg-white dark:bg-neutral-900 text-black dark:text-white">
 		<Nav />
-		<main class="max-w-3xl px-4 pt-6 lg:pt-10 pb-12 sm:px-6 lg:px-8 mx-auto">
+		<main class="max-w-4xl px-4 pt-6 lg:pt-10 pb-12 sm:px-6 lg:px-8 mx-auto">
 			<article>
 				<div class="max-w-[85rem] w-full px-10 py-4">
 					{heroImage && <img width={1020} height={510} src={heroImage} alt={altImage} class="rounded-2xl"/>}
@@ -45,7 +45,8 @@ const { title, description, publishDate, heroImage, altImage } = Astro.props;
 					<div class="title">
 						<h1 class="text-4xl mb-4">{title}</h1>
 						<div class="mb-4">
-							<FormattedDate date={publishDate} />
+							<button class="py-1.5 px-3 bg-white text-gray-600 border border-gray-200 text-xs sm:text-sm rounded-xl dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400"><FormattedDate date={publishDate} /></button>
+							
 						</div>
 						
 						<hr />
