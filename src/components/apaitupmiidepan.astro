@@ -3,7 +3,8 @@ import "../styles/global.css";
 import { Image } from "astro:assets";
 import FotoPMIIDepan from "../assets/images/Foto-Depan-PMIKOMFAKDISH.jpg";
 ---
-<div class="max-w-[85rem] px-10 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
+<div class="max-w-full px-10 py-10 sm:px-6 lg:px-10 lg:py-14 mx-auto bg-blue-900 dark:bg-neutral-900">
+  <div class="max-w-[85rem] mx-auto">
   <div class="md:grid md:grid-cols-2 md:items-center md:gap-12 xl:gap-32">
     <div>
       <Image class="rounded-xl" src={FotoPMIIDepan} alt="Foto PMII Depan" loading="eager" />
@@ -12,17 +13,18 @@ import FotoPMIIDepan from "../assets/images/Foto-Depan-PMIKOMFAKDISH.jpg";
     <div class="mt-5 sm:mt-10 lg:mt-0">
       <div class="space-y-6 sm:space-y-8">
         <div class="space-y-2 md:space-y-4">
-          <h2 class="pt-3 text-center font-bold text-3xl lg:text-4xl text-gray-800 dark:text-neutral-200">
+          <h2 class="pt-3 text-center font-bold text-3xl lg:text-4xl text-white dark:text-neutral-200">
             PMII KOMFAKDISH
           </h2>
-          <p class="text-gray-500 dark:text-neutral-500">
+          <p class="text-white dark:text-neutral-500">
             Pergerakan Mahasiswa Islam Indonesia (PMII) Komisariat Fakultas Dirasat Islamiyah, adalah rumah perjuangan bagi mahasiswa yang ingin tumbuh secara intelektual, spiritual, dan sosial.
           </p>
-          <p class="text-gray-500 dark:text-neutral-500">
+          <p class="text-white dark:text-neutral-500">
             Di sinilah tempat ide-ide besar lahir, semangat kader ditempa, dan perjuangan digelorakan. Kami percaya bahwa perubahan dimulai dari pemikiran yang tajam dan gerakan yang terorganisir.
           </p>
         </div>
       </div>
     </div>
+  </div>
   </div>
 </div>
