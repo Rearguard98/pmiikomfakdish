@@ -1,7 +1,7 @@
 ---
 title: PMII KOMFAKDISH Bahas Kitab Rujukan Ahlusunnah Wal Jama’ah di Landmark UIN Jakarta!
 publishDate: 2025-07-14
-heroImage: https://pmiikomfakdish.or.id/images/Distraksi-pengertian-bidah-dan-sunnah-perspektif-kitab-risalah-ahlusunnah-wal-jamaah.jpg
+heroImage: images/Distraksi-pengertian-bidah-dan-sunnah-perspektif-kitab-risalah-ahlusunnah-wal-jamaah.jpg
 altImage: Distraksi
 description: Pergerakan Mahasiswa Islam Indonesia (PMII) Komisariat Fakultas Dirasat Islamiyah (KOMFAKDISH) menggelar diskusi interaktif perdana bertajuk DISTRAKSI (Diskusi Interaktif Sahabat Literasi)
 category: Kegiatan
@@ -31,4 +31,4 @@ Diskusi ini bukan hanya memperluas wawasan keislaman mahasiswa, tapi juga menjad
 
 🕓 Acara dimulai pukul 16.00 WIB dan berlangsung hingga selesai, dengan antusiasme peserta yang tinggi. Untuk kamu yang belum sempat hadir, pastikan jangan ketinggalan seri DISTRAKSI berikutnya!<br><br>
 
-<img src="https://pmiikomfakdish.or.id/images/dokumentasi-distraksi.jpg" alt="Dokumentasi Distraksi" title="Dokumentasi Distraksi" style="border-radius:16px">
+<img src="images/dokumentasi-distraksi.jpg" alt="Dokumentasi Distraksi" title="Dokumentasi Distraksi" style="border-radius:16px">
