@@ -11,7 +11,7 @@ import cloudflare from '@astrojs/cloudflare';
 export default defineConfig({
   site: 'https://pmiikomfakdish.or.id',
   integrations: [mdx(), sitemap()],
-
+  output: 'server',
   vite: {
   plugins: [tailwindcss()],
 },
