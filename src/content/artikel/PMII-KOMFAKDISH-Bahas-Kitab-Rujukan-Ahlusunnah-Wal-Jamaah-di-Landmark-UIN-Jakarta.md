@@ -8,7 +8,8 @@ category: Kegiatan
 tag: PMII, Distraksi
 author: PMII
 status: published
-
+<meta property="og:image" content="https://pmiikomfakdish.or.id/publikasi/pmii-komfakdish-bahas-kitab-rujukan-ahlusunnah-wal-jamaah-di-landmark-uin-jakarta/">
+<meta name="twitter:image" content="https://pmiikomfakdish.or.id/publikasi/pmii-komfakdish-bahas-kitab-rujukan-ahlusunnah-wal-jamaah-di-landmark-uin-jakarta/">
 ---
 
 Landmark UIN Syarif Hidayatullah Jakarta, 3 Juli 2025 <br><br>
