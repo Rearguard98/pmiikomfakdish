@@ -17,10 +17,14 @@
     "@preline/theme-switch": "^3.0.0",
     "@tailwindcss/vite": "^4.0.14",
     "astro": "^5.11.1",
+    "astro-portabletext": "^0.11.1",
     "preline": "^3.0.1",
     "tailwindcss": "^4.0.14"
   },
   "devDependencies": {
     "wrangler": "^4.23.0"
+  },
+  "overrides": {
+    "prismjs": "~1.30.0"
   }
 }
