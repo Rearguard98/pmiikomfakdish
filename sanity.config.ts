@@ -1,16 +1,14 @@
 import {defineConfig} from 'sanity'
 import {structureTool} from 'sanity/structure'
-import {visionTool} from '@sanity/vision'
-import {schemaTypes} from './schemaTypes'
+
+import {schemaTypes} from './sanitystudio/schemaTypes'
 
 export default defineConfig({
   name: 'default',
   title: 'pmiikomfakdish',
-
-  projectId: 'ywo19okn',
-  dataset: 'production',
-
-  plugins: [structureTool(), visionTool()],
+  projectId: import.meta.env.PUBLIC_SANITY_PROJECT_ID,
+  dataset: import.meta.env.PUBLIC_SANITY_DATASET,
+  plugins: [structureTool()],
 
   schema: {
     types: schemaTypes,
