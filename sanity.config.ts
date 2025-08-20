@@ -6,10 +6,9 @@ import {schemaTypes} from './sanitystudio/schemaTypes'
 export default defineConfig({
   name: 'default',
   title: 'pmiikomfakdish',
-  projectId: import.meta.env.PUBLIC_SANITY_PROJECT_ID,
-  dataset: import.meta.env.PUBLIC_SANITY_DATASET,
+  projectId: 'ywo19okn',
+  dataset: 'production',
   plugins: [structureTool()],
-
   schema: {
     types: schemaTypes,
   },

@@ -4,7 +4,7 @@ import type { SanityDocument } from "@sanity/client";
 import { sanityClient } from "sanity:client";
 import imageUrlBuilder from "@sanity/image-url";
 import type { SanityImageSource } from "@sanity/image-url/lib/types/types";
-import { PortableText } from "astro-portabletext";
+import PortableText from "../../components/PortableText.astro";
 
 const POST_QUERY = `*[_type == "post" && slug.current == $slug][0]`;
 const post = await sanityClient.fetch<SanityDocument>(POST_QUERY, Astro.params);
@@ -43,7 +43,7 @@ const postImageUrl = post.mainImage
     <p class="p-5">Diterbitkan: {new Date(post.publishedAt).toLocaleDateString()}</p>
   </div>
   <div class="prose">
-    {Array.isArray(post.body) && <PortableText value={post.body} />}
+    {Array.isArray(post.body) && <PortableText portableText={post.body} />}
   </div>
   <div class="p-3.5">
     <a href="/publikasi" class="hover:underline">&larr; Kembali ke Publikasi</a>

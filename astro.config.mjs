@@ -12,13 +12,12 @@ export default defineConfig({
   site: 'https://pmiikomfakdish.or.id',
 
   integrations: [mdx(), sitemap(), sanity({
-      projectId: "ywo19okn",
-      dataset: "production",
+      projectId: 'ywo19okn',
+      dataset: 'production',
       useCdn: false, // for static builds
-      apiVersion: "2025-01-28",
+      apiVersion: "2025-08-20",
       studioBasePath: "/admin",
     }), react()],
-
   vite: {
   plugins: [tailwindcss()],
 },
