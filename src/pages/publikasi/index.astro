@@ -21,15 +21,13 @@ const postImageUrl = posts.map(post => post.mainImage
   : null);
 ---
 <Layout>
-<main class="container mx-auto min-h-screen max-w-7xl p-8">
-  <h1 class="text-4xl font-bold mb-8">Publikasi</h1>
-  <ul class="grid grid-cols-3 gap-x-16 gap-y-4">
+<main class="container mx-auto min-h-screen max-w-7xl p-8 pb-14">
+  <h1 class="text-center text-4xl font-bold pt-14 pb-14">Publikasi</h1>
+  <ul class="grid grid-cols-1 md:grid-cols-3 gap-x-16 gap-y-16">
     {posts.map((post) => (
         <li class="hover:underline">
           <a href={`/publikasi/${post.slug.current}`}>
-            <h2 class="text-xl font-semibold">{post.title}</h2>
-            <p>{new Date(post.publishedAt).toLocaleDateString()}</p>
-            {
+          {
     postImageUrl && (
       <img
         src={post.mainImage ? postImageUrl[posts.indexOf(post)] : ""}
@@ -40,6 +38,8 @@ const postImageUrl = posts.map(post => post.mainImage
       />
     )
   }
+            <h2 class="text-xl text-center font-semibold pt-5">{post.title}</h2>
+            <p class="text-center">{new Date(post.publishedAt).toLocaleDateString()}</p>
           </a>
         </li>
       ))}
