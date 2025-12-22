@@ -7,7 +7,12 @@ import imageUrlBuilder from "@sanity/image-url";
 import type { SanityImageSource } from "@sanity/image-url/lib/types/types";
 import PortableText from "../../components/PortableText.astro";
 
-const POST_QUERY = `*[_type == "post" && slug.current == $slug][0]`;
+const POST_QUERY = `*[_type == "post" && slug.current == $slug][0]{
+  ...,
+  mainImage{ ..., alt },
+  category->{ _id, title },
+  "tags": tags[]->{_id, title}
+}`;
 const post = await sanityClient.fetch<SanityDocument>(POST_QUERY, Astro.params);
 
 export async function getStaticPaths(): Promise<{ params: { slug: string } }> {
@@ -36,7 +41,7 @@ const ogImageUrl = post.mainImage
     postImageUrl && (
       <img
         src={postImageUrl}
-        alt={post.title}
+        alt={post.mainImage?.alt || post.title}
         class="aspect-video rounded-xl"
         width="700"
         height="500"
@@ -45,6 +50,18 @@ const ogImageUrl = post.mainImage
   }
   <div class="text-center items-center content-center">
     <h1 class="text-4xl font-bold pb-5 pt-5">{post.title}</h1>
+    <div class="flex flex-wrap gap-2 justify-center pb-3">
+      {post.category && (
+        <span class="px-3 py-1 bg-blue-600 text-white text-sm rounded-full">
+          {post.category.title}
+        </span>
+      )}
+      {post.tags && post.tags.map((tag: any) => (
+        <span class="px-3 py-1 bg-gray-300 dark:bg-gray-700 text-gray-800 dark:text-gray-200 text-sm rounded-full">
+          {tag.title}
+        </span>
+      ))}
+    </div>
     <p class="pb-5">Diterbitkan: {new Date(post.publishedAt).toLocaleDateString()}</p>
   </div>
   <div class="prose">
