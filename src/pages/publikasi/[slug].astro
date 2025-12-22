@@ -1,5 +1,6 @@
 ---
 import Layout from "../../layouts/Layout.astro";
+import BaseHead from "../../components/BaseHead.astro";
 import type { SanityDocument } from "@sanity/client";
 import { sanityClient } from "sanity:client";
 import imageUrlBuilder from "@sanity/image-url";
@@ -24,8 +25,12 @@ const urlFor = (source: SanityImageSource) =>
 const postImageUrl = post.mainImage
   ? urlFor(post.mainImage)?.width(550).height(310).url()
   : null;
+const ogImageUrl = post.mainImage
+  ? urlFor(post.mainImage)?.width(1200).height(630).url()
+  : null;
 ---
 <Layout>
+<BaseHead title={post.title} description={post.description || post.title} image={ogImageUrl ?? undefined} />
 <main class="container mx-auto min-h-screen max-w-3xl p-8 flex flex-col gap-4">
   {
     postImageUrl && (
