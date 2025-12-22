@@ -9,12 +9,11 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/cloudflare": "^12.6.12",
     "@astrojs/mdx": "^4.3.13",
     "@astrojs/react": "^4.4.2",
     "@astrojs/rss": "^4.0.14",
     "@astrojs/sitemap": "^3.6.0",
-    "@astrojs/vercel": "^9.0.2",
+    "@astrojs/vercel": "^8.0.4",
     "@preline/collapse": "^3.0.0",
     "@preline/theme-switch": "^3.0.0",
     "@sanity/astro": "^3.2.10",

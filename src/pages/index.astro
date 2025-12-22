@@ -3,11 +3,12 @@ import Layout from "../layouts/Layout.astro";
 import Komisariatdepan from "../components/komisariatdepan.astro";
 import Apaitupmiidepan from "../components/apaitupmiidepan.astro";
 import Keunggulan from "../components/keunggulan.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+
 const image = "https://pmiikomfakdish.or.id/assets/images/Foto-Depan-PMIKOMFAKDISH.jpg";
 ---
 
-<Layout meta name="og:image" content={image}
-  meta name="og:twitter" content={image} >
+<Layout title={SITE_TITLE} description={SITE_DESCRIPTION} image={image}>
   <Komisariatdepan />
   <Apaitupmiidepan />
   <Keunggulan />
