@@ -24,3 +24,6 @@ pnpm-debug.log*
 
 # jetbrains setting folder
 .idea/
+IMPROVEMENTS.md
+SCHEMA_IMPLEMENTATION.md
+SECURITY_FIX_REPORT.md

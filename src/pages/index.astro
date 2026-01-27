@@ -1,5 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import SchemaOrganization from "../components/SchemaOrganization.astro";
+import SchemaWebsite from "../components/SchemaWebsite.astro";
 import Komisariatdepan from "../components/komisariatdepan.astro";
 import Apaitupmiidepan from "../components/apaitupmiidepan.astro";
 import Keunggulan from "../components/keunggulan.astro";
@@ -9,6 +11,8 @@ const image = "https://pmiikomfakdish.or.id/assets/images/Foto-Depan-PMIKOMFAKDI
 ---
 
 <Layout title={SITE_TITLE} description={SITE_DESCRIPTION} image={image}>
+  <SchemaOrganization />
+  <SchemaWebsite />
   <Komisariatdepan />
   <Apaitupmiidepan />
   <Keunggulan />

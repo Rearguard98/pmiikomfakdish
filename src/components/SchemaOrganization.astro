@@ -1,0 +1,12 @@
+---
+import { createOrganizationSchema } from '../utils/schema';
+
+interface Props {
+  overrides?: Record<string, any>;
+}
+
+const { overrides = {} } = Astro.props;
+const schema = createOrganizationSchema(overrides);
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(schema)} />

@@ -2,7 +2,13 @@
 import BaseHead from "../components/BaseHead.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import SchemaBreadcrumb from "../components/SchemaBreadcrumb.astro";
 import "../styles/global.css";
+
+const breadcrumbs = [
+  { name: "Beranda", url: "https://pmiikomfakdish.or.id" },
+  { name: "Kegiatan", url: "https://pmiikomfakdish.or.id/kegiatan" }
+];
 ---
 
 <!doctype html>
@@ -12,6 +18,7 @@ import "../styles/global.css";
   </head>
   <body>
     <Header />
+    <SchemaBreadcrumb items={breadcrumbs} />
     <main>
       <h1>Kegiatan PMII Komfakdish</h1>
       <p>

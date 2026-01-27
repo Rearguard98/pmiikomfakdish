@@ -1,10 +1,18 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import BaseHead from "../components/BaseHead.astro";
+import SchemaBreadcrumb from "../components/SchemaBreadcrumb.astro";
+
+const breadcrumbs = [
+  { name: "Beranda", url: "https://pmiikomfakdish.or.id" },
+  { name: "Tentang PMII", url: "https://pmiikomfakdish.or.id/tentangpmii" },
+  { name: "Struktur Kepengurusan", url: "https://pmiikomfakdish.or.id/strukturkepengurusan" }
+];
 ---
 
 <Layout>
     <BaseHead title="Struktur Kepengurusan" description="Halaman struktur kepengurusan PMII Komfakdish - Website resmi PMII Komfakdish" image="https://pmiikomfakdish.or.id/assets/images/Foto-Depan-PMIKOMFAKDISH.jpg" />
+    <SchemaBreadcrumb items={breadcrumbs} />
     <!-- Team -->
 <div class="max-w-340 px-6 py-16 sm:px-6 lg:px-8 lg:py-14 mx-auto">
   <!-- Title -->

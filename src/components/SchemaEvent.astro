@@ -1,0 +1,26 @@
+---
+import { createEventSchema } from '../utils/schema';
+
+interface Props {
+  name: string;
+  description: string;
+  startDate: Date;
+  endDate?: Date;
+  location?: string;
+  image?: string;
+  url: string;
+}
+
+const { name, description, startDate, endDate, location, image, url } = Astro.props;
+const schema = createEventSchema({
+  name,
+  description,
+  startDate,
+  endDate,
+  location,
+  image,
+  url,
+});
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(schema)} />

@@ -1,5 +1,6 @@
 ---
 import Layout from "../../layouts/Layout.astro";
+import SchemaBreadcrumb from "../../components/SchemaBreadcrumb.astro";
 import type { SanityDocument } from "@sanity/client";
 import { sanityClient } from "sanity:client";
 import imageUrlBuilder from "@sanity/image-url";
@@ -19,8 +20,14 @@ const urlFor = (source: SanityImageSource) =>
 const postImageUrl = posts.map(post => post.mainImage
   ? urlFor(post.mainImage)?.width(550).height(310).url()
   : null);
+
+const breadcrumbs = [
+  { name: "Beranda", url: "https://pmiikomfakdish.or.id" },
+  { name: "Publikasi", url: "https://pmiikomfakdish.or.id/publikasi" }
+];
 ---
 <Layout>
+<SchemaBreadcrumb items={breadcrumbs} />
 <main class="container mx-auto min-h-screen max-w-7xl p-8 pb-14">
   <h1 class="text-center text-4xl font-bold pt-14 pb-14">Publikasi</h1>
   <ul class="grid grid-cols-1 md:grid-cols-3 gap-x-16 gap-y-16">

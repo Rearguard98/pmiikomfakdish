@@ -1,0 +1,24 @@
+---
+import { createArticleSchema } from '../utils/schema';
+
+interface Props {
+  title: string;
+  description: string;
+  image?: string;
+  publishDate: Date;
+  url: string;
+  author?: string;
+}
+
+const { title, description, image, publishDate, url, author } = Astro.props;
+const schema = createArticleSchema({
+  title,
+  description,
+  image,
+  publishDate,
+  url,
+  author,
+});
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(schema)} />
